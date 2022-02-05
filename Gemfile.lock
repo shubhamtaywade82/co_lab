@@ -112,6 +112,20 @@ GEM
       sexp_processor (~> 4.8)
     globalid (1.0.0)
       activesupport (>= 5.0)
+    haml (5.2.2)
+      temple (>= 0.8.0)
+      tilt
+    haml-rails (2.0.1)
+      actionpack (>= 5.1)
+      activesupport (>= 5.1)
+      haml (>= 4.0.6, < 6.0)
+      html2haml (>= 1.0.1)
+      railties (>= 5.1)
+    html2haml (2.2.0)
+      erubis (~> 2.7.0)
+      haml (>= 4.0, < 6)
+      nokogiri (>= 1.6.0)
+      ruby_parser (~> 3.5)
     i18n (1.9.1)
       concurrent-ruby (~> 1.0)
     ice_nine (0.11.2)
@@ -275,8 +289,10 @@ GEM
     stimulus-rails (1.0.2)
       railties (>= 6.0.0)
     strscan (3.0.1)
+    temple (0.8.2)
     thor (1.2.1)
     thread_safe (0.3.6)
+    tilt (2.0.10)
     timeout (0.2.0)
     tty-which (0.4.2)
     turbo-rails (1.0.1)
@@ -309,6 +325,7 @@ DEPENDENCIES
   debug
   factory_bot_rails
   faker
+  haml-rails (~> 2.0)
   jbuilder
   jsbundling-rails
   mysql2 (~> 0.5)
