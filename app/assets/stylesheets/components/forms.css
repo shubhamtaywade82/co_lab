@@ -1,0 +1,23 @@
+@layer components {
+  input {
+    border-radius: 0;
+    border-color: #dfe2e5;
+    border-width: 1px;
+    border-style: solid;
+    padding: 0.5rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    &:focus {
+      outline: 0;
+      box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    }
+  }
+
+  h1 {
+    @apply text-blue-500;
+  }
+}
