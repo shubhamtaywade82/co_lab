@@ -1,4 +1,14 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
 @import "./components/forms.css";
-@import "tailwindcss/utilities"
+
+@layer utilities {
+  body {
+    @apply bg-gray-200;
+  }
+  nav {
+    @apply bg-white;
+  }
+}
