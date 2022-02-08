@@ -1,25 +1,22 @@
-%h1 Listing users
-%table
-  %thead
-    %tr
-      %th Email
-      %th Username
-      %th Password
-      %th First name
-      %th Last name
-      %th
-      %th
-      %th
-  %tbody
-    - @users.each do |user|
-      %tr
-        %td= user.email
-        %td= user.username
-        %td= user.password
-        %td= user.first_name
-        %td= user.last_name
-        %td= link_to 'Show', user
-        %td= link_to 'Edit', edit_user_path(user)
-        %td= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }
-%br
 = link_to 'New User', new_user_path
+.flex.flex-column.flex-row-md.flex-row-lg.flex-row-xl.justify-center
+  .my-2.overflow-x-auto.sm:-mx-6.lg:-mx-8
+    .py-2.align-middle.inline-block.max-w-full.sm:px-6.lg:px-8
+      %header.px-5.py-4.border-b.border-gray-100
+        %h1.py-2.font-semibold.text-gray-800 Listing Users
+      .shadow.overflow-hidden.border-b.border-gray-200.sm:rounded-lg
+        %table
+          %thead.bg-gray-50
+            %tr.focus:outline-none.h-16.border.border-gray-100.rounded{tabindex: "0"}
+              %th.tracking-wider{:scope => "col"} Name
+              %th.tracking-wider{:scope => "col"} Email
+              %th{:scope => "col", :colspan => '3' } Action
+          %tbody.bg-white.divide-y.divide-gray-200
+            - @users.each do |user|
+              %tr.focus:outline-none.h-16.border.border-gray-100.rounded{tabindex: "0"}
+                %td= user.name
+                %td= user.email
+                %td= link_to 'Show', user 
+                %td= link_to 'Edit', edit_user_path(user)
+                %td= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }
+= paginate @users

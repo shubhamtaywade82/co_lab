@@ -3,6 +3,8 @@
 @import "tailwindcss/utilities";
 
 @import "./components/forms.css";
+@import "./components/tables.css";
+@import "./components/pagination.css";
 
 @layer utilities {
   body {

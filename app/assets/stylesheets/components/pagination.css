@@ -1,0 +1,27 @@
+@layer utilities {
+  .pagination {
+    @apply flex justify-center;
+    @apply my-2 py-2;
+  }
+  .pagination a:hover {
+    @apply font-semibold text-gray-200 bg-gray-700;
+  }
+  .page {
+    @apply px-2 py-1;
+  }
+  .page.current {
+    @apply bg-gray-500 text-white;
+  }
+  .first {
+    @apply px-2 py-1;
+  }
+  .last {
+    @apply px-2 py-1;
+  }
+  .prev {
+    @apply px-2 py-1;
+  }
+  .next {
+    @apply px-2 py-1;
+  }
+}
