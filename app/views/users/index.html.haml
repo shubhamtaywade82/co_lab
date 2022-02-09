@@ -1,5 +1,4 @@
--# = render "users/search_form"
-
+= link_to "New User", new_user_path
 = turbo_frame_tag("search-form") do
   %div{"data-controller" => "search"}
     = form_with url: users_url, method: "get", data: { "turbo-frame": "search-results", "search-target": "form", action: "input->search#submit" } do                               |
