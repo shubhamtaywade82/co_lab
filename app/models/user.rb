@@ -7,6 +7,16 @@ class User < ApplicationRecord
   validates :last_name, presence: true
   validates :password, presence: true, length: { minimum: 6 }
 
+  def self.search(query = nil)
+    if query
+      where(arel_table[:username].matches("#{query}%"))
+        .or(where(arel_table[:first_name].matches("#{query}%")))
+        .or(where(arel_table[:last_name].matches("#{query}%")))
+    else
+      all
+    end
+  end
+
   def name
     "#{first_name} #{last_name}"
   end
