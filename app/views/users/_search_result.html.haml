@@ -1,8 +1,0 @@
-%article.my-6.max-w-screen-lg
-  %tr.focus:outline-none.h-16.border.border-gray-100.rounded{tabindex: "0"}
-    %td
-      = link_to user, data: {"turbo-frame": "_top"} do
-        = highlight(user.name, /#{query}/i)
-    %td= user.email
-    %td= link_to 'Edit', edit_user_path(user)
-    %td= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }
